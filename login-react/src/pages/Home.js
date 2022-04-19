@@ -5,6 +5,7 @@ const backendUrl = process.env.REACT_APP_BACKEND_URL;
 const providersNames = [
   'discord',
   'facebook',
+  'line',
   'github',
   'google',
   'instagram',
@@ -16,7 +17,7 @@ const providersNames = [
   'auth0',
 ];
 
-const LoginButton = (props) => <a href={`${backendUrl}/api/connect/${props.providerName}`}>
+const LoginButton = (props) => <a href={`${backendUrl}/connect/${props.providerName}`}>
     <button style={{ width: '150px' }}>Connect to {props.providerName}</button>
   </a>;
 
